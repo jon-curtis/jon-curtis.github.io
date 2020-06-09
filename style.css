@@ -1,0 +1,162 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 200vh;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: rgb(235, 235, 235);
+    
+}
+
+#onload{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 200vh;
+    /*background-color: gray;*/
+    transition: 5s opacity;
+    opacity: 100%;
+    /*z-index: 1;*/
+}
+
+#header{
+    width: 100vw;
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 5vh;
+    font-size: 4vh;
+    color: white;
+    background-color: rgba(0, 20, 40, .8);
+}
+
+#bikeContainer {
+    height: 100vh;
+    width: 100vw;
+}
+
+#bike{
+    display: block;
+    bottom: 0;
+    padding: 20px;
+    min-height: 50vh;
+    width: 60vw;
+    max-height: 60vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8vh;
+    overflow: hidden;
+}
+
+
+
+
+#backimage {
+    top: 30vh;
+    min-width: 300vw;
+    height: 200vh; 
+    position: absolute;
+    opacity: 7%;
+    transition: .09s ease-in-out;
+    background: transparent url("resources/bw-flower-h.svg") no-repeat scroll 0% 0%;
+}
+
+
+
+#title{
+    font-family: 'Caudex', serif;
+    font-size: 6vw;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    text-align: center;
+}
+
+h1{
+    position: relative;
+    text-align: center;
+    font-weight: 100;
+    font-size: 2.1vw;
+    font-family: 'Times New Roman', Times, serif
+}
+
+@media screen and (max-width: 800px) {
+    #bike {
+        width: 90vw;
+    }
+    #title {
+        font-size: 10vw;
+    }
+    h1{
+        position: relative;
+        text-align: center;
+        font-weight: 100;
+        font-size: 6vw;
+        font-family: 'Times New Roman', Times, serif
+    }
+}
+
+
+h2{
+    position: relative;
+    text-align: center;
+    font-weight: 100;
+    font-size: 2.1vw;
+}
+
+.cren {
+    max-width: 70vw;
+}
+
+.food {
+    max-height: 15vw;
+}
+
+nav {
+    text-align: center;
+    cursor: pointer;
+}
+
+.nav__links {
+    list-style: none;
+    cursor: pointer;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.nav__links li a {
+    transition: all 0.3 ease 0s;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav__links li a:hover {
+    color: #0074B7;
+    cursor: pointer;
+}
+
+.nav__links li a button {
+    cursor: pointer;
+    position: relative;
+
+
+    background-color: transparent;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 3rem;
+    border-radius: 10%;
+    padding: 5%;
+    border: 0.2rem solid black;
+    font-family: 'Caudex', serif;
+}
