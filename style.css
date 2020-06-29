@@ -28,7 +28,7 @@ body {
     top: 0;
     left: 0;
     position: absolute;
-    height: 5vh;
+    height: 8vh;
     font-size: 4vh;
     color: white;
     background-color: rgba(0, 20, 40, .8);
@@ -70,7 +70,7 @@ body {
 
 .parallax {
   /* The image used */
-  background-image: url('resources/bw-flower-h.svg') ;
+  background-image: url('resources/bw-flower-h.svg');
 
   /* Full height */
   height: 100%; 
@@ -80,6 +80,10 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.cren {
+    height: 150px;
 }
 
 
