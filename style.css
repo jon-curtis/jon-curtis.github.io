@@ -1,6 +1,6 @@
-html {
+/*html {
     scroll-behavior: smooth;
-}
+}*/
 
 body {
     height: 200vh;
@@ -63,7 +63,23 @@ body {
     position: absolute;
     opacity: 7%;
     transition: .09s ease-in-out;
-    background: transparent url("resources/bw-flower-h.svg") no-repeat scroll 0% 0%;
+    /*background: transparent url("resources/bw-flower-h.svg") repeat scroll 0% 0%;*/
+    background: transparent url("resources/bw-flower-h.svg") repeat;
+}
+
+
+.parallax {
+  /* The image used */
+  background-image: url('resources/bw-flower-h.svg') ;
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 
