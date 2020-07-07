@@ -11,9 +11,11 @@
     <style type="text/css">
         #bikeContainer1 {
             display: flex;
-            justify-content: space-between;
+            justify-content:center;
             align-items: center;
             padding: 35px 80px;
+            padding-top: 90px;
+            margin-left: 250px;
         }
 
         #bike1 {
@@ -30,14 +32,13 @@
         	align-content: flex-start;
         }
 
-
-
         .menu-content {
         	justify-content: center;
 			display: flex;
         	flex-wrap: wrap;
         	align-items: flex-start;
-        	align-content: flex-start;
+            align-content: flex-start;
+            margin-left: 250px; /* Same width as the sidebar + left position in px */
         }
         
         .menu-content > div {
@@ -58,10 +59,7 @@
             margin-right: auto;
             position: relative;
             text-align: center;
-        }
-
-        .item {
-
+            margin-left: 250px; /* Same width as the sidebar + left position in px */
         }
 
         .item .name {
@@ -93,34 +91,74 @@
             float: left;
         }
 
-        .menu__links {
-        	justify-content: center;
+        .menu-display .extra-info{
+            margin-left: 250px; /* Same width as the sidebar + left position in px */
+        }
+
+        /*.menu__links {
+        	justify-content: space-around;
 			display: flex;
         	flex-wrap: wrap;
-        	align-items: flex-start;
-        	align-content: flex-start;
+        	align-items: center;
+            align-content: flex-start;
+            background-color: rgba(153, 102, 51, .2);
         }
         
         .menu__links > div {
-            width: 230px;
-			margin-right: 10px;
-			margin: 20px;
+            width: 150px;
+			margin: 5px;
         }
 
         .menu__links a {
             text-decoration: none;
-        }
+        }*/
 
         .menu__links a button {
             cursor: pointer;
             position: relative;
             background-color: transparent;
             color: black;
-            text-align: center;
             text-decoration: none;
-            display: block;
-            font-size: 27px;
+            font-size: 25px;
+            border-radius: 10%;
+            border: 0.2rem solid black;
             font-family: 'Caudex', serif;
+        }
+
+        .menu__links div {
+            padding-bottom: 5%;
+            text-align: center;
+        }
+
+        .menu__links {
+            width: 250px;
+            position: fixed;
+            z-index: 1;
+            top: 12%;
+            bottom: 7%;
+            border-radius: 3%;
+            background: rgba(153, 102, 51, .2);
+            overflow-x: hidden;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            left: 10px;
+            
+        }
+
+        .cren-center {
+            align-content: center;
+        }
+
+        .cren-top {
+            max-width: 200px;
+            align-content: center;
+            padding-left: 5%;
+        }
+
+        .cren-bot {
+            max-width: 200px;
+            align-content: center;
+            padding-left: 5%;
         }
 
 
@@ -142,26 +180,27 @@
     <div id="onload"> </div>
     <div class="backimage"></div>
 
-
+    <div class="parallax_menu">
     <div id="header">Open Now! /// Closed, open XX:XX on XXXX</div>
     <div id="bikeContainer1">
-        <img id="bike1" src="resources/bike2h.svg" alt="Bike Logo">
+    <!--<img id="bike1" src="resources/bike2h.svg" alt="Bike Logo">-->
 
-        <nav>
+        <!--<nav>
             <ul class="nav__links">
                 <li><a href="index.html"><button>home</button></a></li>
-                <li><a href="menu.html"><button>menu</button></a></li>
-                <!--<li><a href="about.html"><button>about</button></a></li>-->
+                <li><a href="about.html"><button>about</button></a></li>
             </ul>
         </nav>
 
+        <img id="bike1" src="resources/bike2h.svg" alt="Bike Logo">-->
         <img id="bike1" src="resources/bike2h.svg" alt="Bike Logo">
 
- 
     </div>
 
 
     <div class="menu__links">
+        <div class="cren-center"><img class="cren-top" src="resources/divtop.svg"></div>
+        <div><a href="index.html"><button>Home</button></a></div>
         <div><a href="#Appetizers"><button>Appetizers</button></a></div>
         <div><a href="#Salads"><button>Salads</button></a></div>
         <div><a href="#Sandwiches"><button>Sandwiches</button></a></div>
@@ -169,12 +208,15 @@
         <div><a href="#Entrees"><button>Entrees</button></a></div>
         <div><a href="#Wood Fired Pizza"><button>Wood Fired Pizza</button></a></div>
         <div><a href="#Specialty Pizzas"><button>Specialty Pizzas</button></a></div>
+        <div class="cren-center"><img class="cren-bot" src="resources/divbot.svg"></div>
+        
     </div>
 
-
     <div id="menu-display">
-        <div class="section-title">Appetizers</div>
+        <div style="margin-left: 250px;"> <hr class="item-sep"></div>
         <a name="Appetizers"></a>
+        <div class="section-title">Appetizers</div>
+        
 
         <div class="menu-content">
             <!--<img class="food-pic" src="resources/smokedMoz.jpeg" alt="Photo by Patricia Tsernoshova on Unsplash">-->
@@ -249,35 +291,64 @@
             </div>
         </div>
 
-
-        <div class="section-title">Salads</div>
+        <div style="margin-left: 250px;">
+            <hr class="item-sep">
+        </div>
         <a name="Salads"></a>
+        <div class="section-title">Salads</div>
+        
+        <div name="extra-info" style="margin-left: 250px;">
+            <hr class="item-sep">
+            <div name="info" style="text-align: center; font-family: 'Caudex'">Dressings: Blue Cheese, Ranch, Peppercorn Parmesan, Balsamic, Honey Mustard, Extra Dressing $0.50 each</div>
+            <div name="info" style="text-align: center; font-family: 'Caudex'">Add Chicken to any salad for $4 - Add Salmon (6oz) $9 - Add Feta $1.50 - Add Goat Cheese $2.50</div>
+            <hr class="item-sep">
+        </div>
+
+        <div class="menu-content">
+            <div class="item">
+                <div class="name">House Salad</div>
+                <hr class="item-sep">
+                <div class="desc">Mesclun Greens, tomatoes, red onions, cucumbers & kalamata olives topped with shredded carrots.</div>
+                <div class="price">$9</div>
+            </div>
+        </div>
 
 
 
-
-        <div class="section-title">Sandwiches</div>
+        <div style="margin-left: 250px;">
+            <hr class="item-sep">
+        </div>
         <a name="Sandwiches"></a>
+        <div class="section-title">Sandwiches</div>
+        
 
-
-
-        <div class="section-title">Tacos</div>
+        <div style="margin-left: 250px;">
+            <hr class="item-sep">
+        </div>
         <a name="Tacos"></a>
+        <div class="section-title">Tacos</div>
+        
 
-
-
-        <div class="section-title">Entrees</div>
+        <div style="margin-left: 250px;">
+            <hr class="item-sep">
+        </div>
         <a name="Entrees"></a>
+        <div class="section-title">Entrees</div>
+        
 
-
-
-        <div class="section-title">Wood Fired Pizza</div>
+        <div style="margin-left: 250px;">
+            <hr class="item-sep">
+        </div>
         <a name="Wood Fired Pizza"></a>
+        <div class="section-title">Wood Fired Pizza</div>
+        
 
-
-
-        <div class="section-title">Specialty Pizzas</div>
+        <div style="margin-left: 250px;">
+            <hr class="item-sep">
+        </div>
         <a name="Specialty Pizzas"></a>
+        <div class="section-title">Specialty Pizzas</div>
+        
 
 
 
@@ -286,7 +357,7 @@
 
 
     </div>
-
+    </div>
 
 
 </body>
